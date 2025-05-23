@@ -1,12 +1,36 @@
-# React + Vite
+# Drag & Drop Task Board (React + dnd-kit)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A drag-and-drop enabled Kanban-style task board built with **React** and **@dnd-kit**. You can dynamically create columns and tasks, drag and drop tasks between columns, reorder them, and edit/delete tasks or columns inline.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add, edit, and delete columns
+- Add, edit, and delete tasks within columns
+- Drag & drop tasks within and between columns
+- Drag & drop columns to reorder
+- Fully powered by `@dnd-kit` for smooth sorting and overlays
+- Inline editing with auto-save on blur or Enter key
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Tailwind CSS
+- @dnd-kit/core
+- @dnd-kit/sortable
+- @dnd-kit/utilities
+
+## Installation
+
+## Real-Time Synchronization
+
+1. **Backend Setup ( Socket.IO):**
+   - Set up a basic server with Socket.IO.
+   - Listen for task events like `task-created`, `task-updated`, `task-deleted`, and `task-moved`.
+   - Broadcast these events to all connected clients except the sender.
+ 
+
+**Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/task-board.git
+   cd task-board
